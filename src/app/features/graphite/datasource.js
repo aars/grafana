@@ -118,6 +118,7 @@ function (angular, _, $, config, kbn, moment) {
             for (var i = 0; i < results.data.length; i++) {
               var e = results.data[i];
               list.push({
+                eventId: e.id,
                 annotation: annotation,
                 time: e.when * 1000,
                 title: e.what,
