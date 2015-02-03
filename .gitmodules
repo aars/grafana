@@ -1,0 +1,3 @@
+[submodule "src/plugins/annotations.panel"]
+	path = src/plugins/annotations.panel
+	url = git@github.com:aars/grafana-annotations-panel-plugin.git
