@@ -17,7 +17,19 @@
     <!-- endbuild -->
 
     <script>require(['app'], function (app) { app.boot(); })</script>
-
+    <script>
+      function overrideShareUrl() {
+        var shareHost = 'graphs.rxs.sp2o.org';
+        $('input[data-share-panel-url], input[ng-model="share.url"]').each(function () {
+          if (!this.__changed__ && this.value) {
+            this.value = this.value.replace(document.location.host, shareHost);
+            this.__changed__ = true;
+          }
+        });
+        window.requestAnimationFrame(overrideShareUrl);
+      }
+      overrideShareUrl();
+    </script>
   </head>
 
   <body ng-cloak ng-controller="GrafanaCtrl">
