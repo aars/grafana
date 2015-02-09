@@ -5,6 +5,7 @@ define([
   './fromDB',
   './fromFile',
   './fromScript',
+  './playlist'
 ],
 function (angular, config, store) {
   'use strict';
