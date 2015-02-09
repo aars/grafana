@@ -19,7 +19,7 @@
     <script>require(['app'], function (app) { app.boot(); })</script>
     <script>
       function overrideShareUrl() {
-        var shareHost = 'graphs.rxs.sp2o.org';
+        var shareHost = 'graphs.realxs.nl';
         $('input[data-share-panel-url], input[ng-model="share.url"]').each(function () {
           if (!this.__changed__ && this.value) {
             this.value = this.value.replace(document.location.host, shareHost);
